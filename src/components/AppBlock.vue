@@ -29,7 +29,7 @@ function stopTimer() {
 }
 </script>
 <template>
-  <div class="block" v-if="showBlock" @click="stopTimer">click me</div>
+  <div class="w-5 h-5 m-3 rounded bg-red-400" v-if="showBlock" @click="stopTimer"></div>
 </template>
 
 <style scoped>

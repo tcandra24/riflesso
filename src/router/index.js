@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import IndexView from '../views/IndexVuew.vue'
+import IndexView from '../views/IndexView.vue'
 import PlayGround from '../views/PlayGround.vue'
 
 const router = createRouter({
