@@ -2,7 +2,7 @@
 
 <template>
   <header>
-    <nav class="z-10 w-full absolute">
+    <nav class="z-10 w-full">
       <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
         <div
           class="flex flex-wrap items-center justify-between py-2 gap-6 md:py-4 md:gap-0 relative"

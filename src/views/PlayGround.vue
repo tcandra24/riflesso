@@ -15,7 +15,10 @@ function start() {
   showResult.value = false
 }
 
-function endGame(value) {
+function countScore(value) {
+  // scores.value.push({
+  //   value
+  // })
   score.value = value
   isPlaying.value = false
   showResult.value = true
@@ -23,18 +26,7 @@ function endGame(value) {
 </script>
 <template>
   <div class="relative py-16">
-    <div
-      aria-hidden="true"
-      class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
-    >
-      <div
-        class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
-      ></div>
-      <div
-        class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"
-      ></div>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+    <div class="w-full mx-auto px-6 md:px-12 xl:px-6">
       <div class="relative">
         <div class="flex items-center justify-center -space-x-2">
           <button
@@ -45,16 +37,13 @@ function endGame(value) {
             <span class="relative text-base font-semibold text-white">Start</span>
           </button>
         </div>
-        <div class="mt-6 m-auto space-y-6 md:w-8/12 lg:w-7/12">
-          <AppBlock v-if="isPlaying" :delay="delay" @end="endGame" />
-          <!-- <p v-if="showResult">Reaction time: {{ score }} ms </p> -->
-
-          <h1
-            v-if="!isPlaying"
-            class="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl"
-          >
-            Get Started now
-          </h1>
+        <div
+          v-if="isPlaying"
+          class="mt-6 m-auto space-y-6 md:w-10/12 lg:w-9/12 rounded border-2 border-zinc-800 border-dashed"
+        >
+          <AppBlock :delay="delay" @countScore="countScore" />
+        </div>
+        <div class="my-5">
           <AppResult v-if="showResult" :score="score" />
         </div>
       </div>

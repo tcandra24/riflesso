@@ -10,36 +10,70 @@ const reactionTime = ref(0)
 
 const emits = defineEmits(['end'])
 
+const top = ['top-1/2', 'top-1/3', 'top-2/3', 'top-1/4', 'top-2/4', 'top-3/4']
+const left = ['left-1/2', 'left-1/3', 'left-2/3', 'left-1/4', 'left-2/4', 'left-3/4']
+const colors = ['bg-red-400', 'bg-indigo-400', 'bg-gray-400', 'bg-orange-400', 'bg-lime-400']
+
+const times = ref(5)
+const counter = ref(1)
+const scores = ref([])
+
+const topClass = ref('')
+const leftClass = ref('')
+const colorClass = ref('')
+
+topClass.value = random(top)
+leftClass.value = random(left)
+colorClass.value = random(colors)
+
 onMounted(() => {
   setTimeout(() => {
-    showBlock.value = true
     startTimer()
   }, props.delay)
 })
 
 function startTimer() {
+  showBlock.value = true
+
   timer.value = setInterval(() => {
     reactionTime.value += 10
   }, 10)
 }
 
-function stopTimer() {
+function random(array) {
+  return array[Math.floor(Math.random() * array.length)]
+}
+
+function getReactionTime() {
   clearInterval(timer.value)
-  emits('end', reactionTime.value)
+  if (isPlay(counter.value, times.value)) {
+    emits('countScore', scores.value)
+  }
+
+  calculateScore()
+}
+
+function calculateScore() {
+  scores.value.push(reactionTime.value)
+  topClass.value = random(top)
+  leftClass.value = random(left)
+  colorClass.value = random(colors)
+  reactionTime.value = 0
+  startTimer()
+
+  counter.value++
+}
+
+function isPlay(counter, times) {
+  return counter >= times
 }
 </script>
 <template>
-  <div class="w-5 h-5 m-3 rounded bg-red-400" v-if="showBlock" @click="stopTimer"></div>
+  <div class="h-32 relative">
+    <div
+      :class="`h-5 w-5 m-3 rounded-full absolute z-50 ${topClass} ${leftClass} ${colorClass}`"
+      v-if="showBlock"
+      @click="getReactionTime"
+    ></div>
+  </div>
 </template>
-
-<style scoped>
-.block {
-  width: 400px;
-  border-radius: 20px;
-  background: #0faf87;
-  color: white;
-  text-align: center;
-  padding: 100px 0;
-  margin: 40px auto;
-}
-</style>
