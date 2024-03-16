@@ -2,7 +2,8 @@
 import AppBlock from '@/components/AppBlock.vue'
 import AppResult from '@/components/AppResult.vue'
 
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
+import ConfettiExplosion from 'vue-confetti-explosion'
 
 const isPlaying = ref(false)
 const showResult = ref(false)
@@ -15,10 +16,12 @@ function start() {
   showResult.value = false
 }
 
-function countScore(value) {
+async function countScore(value) {
   // scores.value.push({
   //   value
   // })
+  await nextTick()
+
   score.value = value
   isPlaying.value = false
   showResult.value = true
@@ -29,6 +32,7 @@ function countScore(value) {
     <div class="w-full mx-auto px-6 md:px-12 xl:px-6">
       <div class="relative">
         <div class="flex items-center justify-center -space-x-2">
+          <ConfettiExplosion v-if="showResult" />
           <button
             class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-indigo-500 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
             @click="start()"
