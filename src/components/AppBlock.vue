@@ -46,6 +46,7 @@ function random(array) {
 
 function getReactionTime() {
   clearInterval(timer.value)
+  showBlock.value = false
   if (isPlay(counter.value, times.value)) {
     emits('countScore', scores.value)
   }
@@ -69,7 +70,7 @@ function isPlay(counter, times) {
 }
 </script>
 <template>
-  <div class="h-32 relative">
+  <div class="h-64 relative">
     <div
       :class="`h-5 w-5 m-3 rounded-full absolute z-50 ${topClass} ${leftClass} ${colorClass}`"
       v-if="showBlock"
