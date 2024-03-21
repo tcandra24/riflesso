@@ -56,19 +56,19 @@
                 class="tracking-wide font-medium lg:text-sm flex-col flex lg:flex-row gap-6 lg:gap-0"
               >
                 <li>
-                  <a href="#features" class="block md:px-4 transition hover:text-primary">
+                  <router-link to="/" class="block md:px-4 transition hover:text-primary">
                     <span>Home</span>
-                  </a>
+                  </router-link>
                 </li>
                 <li>
-                  <a href="#solution" class="block md:px-4 transition hover:text-primary">
+                  <router-link to="/highscore" class="block md:px-4 transition hover:text-primary">
                     <span>Highscore</span>
-                  </a>
+                  </router-link>
                 </li>
                 <li>
-                  <a href="#testimonials" class="block md:px-4 transition hover:text-primary">
+                  <router-link to="/about" class="block md:px-4 transition hover:text-primary">
                     <span>About</span>
-                  </a>
+                  </router-link>
                 </li>
               </ul>
             </div>

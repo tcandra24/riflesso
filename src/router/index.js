@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import IndexView from '../views/IndexView.vue'
 import PlayGround from '../views/PlayGround.vue'
+import HighScore from '../views/HighScore.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +15,11 @@ const router = createRouter({
       path: '/playground',
       name: 'playgorund',
       component: PlayGround
+    },
+    {
+      path: '/highscore',
+      name: 'highscore',
+      component: HighScore
     },
     {
       path: '/about',

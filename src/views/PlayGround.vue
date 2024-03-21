@@ -5,10 +5,14 @@ import AppResult from '@/components/AppResult.vue'
 import { ref, nextTick } from 'vue'
 import ConfettiExplosion from 'vue-confetti-explosion'
 
+import { useHighScore } from '../stores/highscore'
+
+const { storeScore } = useHighScore()
+
 const isPlaying = ref(false)
 const showResult = ref(false)
 const delay = ref(null)
-const score = ref(null)
+const avgScore = ref(null)
 
 function start() {
   delay.value = 2000 + Math.random() * 5000
@@ -17,14 +21,14 @@ function start() {
 }
 
 async function countScore(value) {
-  // scores.value.push({
-  //   value
-  // })
   await nextTick()
 
-  score.value = value
+  avgScore.value = value.reduce((total, current) => total + current, 0) / value.length
+
   isPlaying.value = false
   showResult.value = true
+
+  storeScore(avgScore, value)
 }
 </script>
 <template>
@@ -47,7 +51,7 @@ async function countScore(value) {
           <AppBlock :delay="delay" @countScore="countScore" />
         </div>
         <div class="my-5">
-          <AppResult v-if="showResult" :score="score" />
+          <AppResult v-if="showResult" :score="avgScore" />
         </div>
       </div>
     </div>
