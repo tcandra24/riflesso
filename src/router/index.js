@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import IndexView from '../views/IndexView.vue'
+import HomeView from '../views/HomeView.vue'
 import PlayGround from '../views/PlayGround.vue'
 import HighScore from '../views/HighScore.vue'
 
@@ -9,7 +9,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: IndexView
+      component: HomeView
     },
     {
       path: '/playground',
