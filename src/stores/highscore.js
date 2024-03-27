@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia'
+import { useLocalStorage } from '@vueuse/core'
 
 export const useHighScore = defineStore('highscore', {
   state: () => ({
-    lists: []
+    lists: useLocalStorage('Highscore:lists', [])
   }),
   getters: {
     getHighScore: (state) => {

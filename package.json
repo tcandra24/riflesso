@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vueuse/core": "^10.9.0",
     "@vueuse/motion": "^2.1.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.15",
