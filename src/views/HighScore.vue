@@ -24,8 +24,10 @@ const sortHighscore = store.getHighScore.sort((a, b) => a.avgScore - b.avgScore)
               />
             </div>
             <div class="flex-1 min-w-0">
-              <p class="text-sm font-medium text-gray-900 truncate dark:text-white">#Name</p>
-              <p class="text-sm text-gray-500 truncate dark:text-gray-400">#Email</p>
+              <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                {{ list.name }}
+              </p>
+              <p class="text-sm text-gray-500 truncate dark:text-gray-400">{{ list.email }}</p>
             </div>
             <div
               class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"

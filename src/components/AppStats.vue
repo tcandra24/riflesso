@@ -35,14 +35,13 @@
         </div>
         <div class="md:7/12 lg:w-1/2">
           <h2 class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
-            Nuxt development is carried out by passionate developers
+            Riflesso Build for people who want to get fast reflex
           </h2>
-          <p class="my-8 text-gray-600 dark:text-gray-300">
-            Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at?
-            Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia. <br />
-            <br />
-            Vitae error, quaerat officia delectus voluptatibus explicabo quo pariatur impedit, at
-            reprehenderit aliquam a ipsum quas voluptatem. Quo pariatur asperiores eum amet.
+          <p class="my-8 text-gray-600 dark:text-gray-300 text-justify">
+            Quick reflexes give strong martial artists the upper hand in dealing with their
+            opponents. Enemy movements are unpredictable. However, martial artists who continually
+            improve their reflexes through conscious practice will anticipate every move and respond
+            effectively.
           </p>
           <div class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
             <div class="mt-8 flex gap-4 md:items-center">
@@ -54,19 +53,15 @@
                   class="w-6 h-6 m-auto text-indigo-500 dark:text-indigo-400"
                 >
                   <path
-                    fill-rule="evenodd"
-                    d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z"
-                    clip-rule="evenodd"
+                    d="M12 2h2v2h2v3.702l7 2.618v12.68h1v1h-24v-1h1v-11h6v-8h2v-2h2v-2h1v2zm3 3h-7v18h1v-2h5v2h1v-18zm-2 17h-3v1h3v-1zm8 1h1v-11.987l-6-2.243v14.23h1v-2h4v2zm-14-10h-5v10h1v-2h3v2h1v-10zm-2 9h-1v1h1v-1zm15 0h-2v1h2v-1zm-16-5v2h-1v-2h1zm2 0v2h-1v-2h1zm5-10v12h-1v-12h1zm10 11v1h-4v-1h4zm-8-11v12h-1v-12h1zm8 9v1h-4v-1h4zm-17-2v2h-1v-2h1zm2 0v2h-1v-2h1zm15 0v1h-4v-1h4zm0-2v1h-4v-1h4zm-8-9h-3v1h3v-1z"
                   />
                 </svg>
               </div>
               <div class="w-5/6">
                 <h4 class="font-semibold text-lg text-gray-700 dark:text-indigo-300">
-                  Chat Anytime
+                  Access Anytime
                 </h4>
-                <p class="text-gray-500 dark:text-gray-400">
-                  Asperiores nemo possimus nesciunt quam mollitia.
-                </p>
+                <p class="text-gray-500 dark:text-gray-400">can access anytime & anywhere</p>
               </div>
             </div>
             <div class="pt-4 flex gap-4 md:items-center">
@@ -78,18 +73,14 @@
                   class="w-6 h-6 m-auto text-teal-600 dark:text-teal-400"
                 >
                   <path
-                    fill-rule="evenodd"
-                    d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
-                    clip-rule="evenodd"
+                    d="M15.91 13.34l2.636-4.026-.454-.406-3.673 3.099c-.675-.138-1.402.068-1.894.618-.736.823-.665 2.088.159 2.824.824.736 2.088.665 2.824-.159.492-.55.615-1.295.402-1.95zm-3.91-10.646v-2.694h4v2.694c-1.439-.243-2.592-.238-4 0zm8.851 2.064l1.407-1.407 1.414 1.414-1.321 1.321c-.462-.484-.964-.927-1.5-1.328zm-18.851 4.242h8v2h-8v-2zm-2 4h8v2h-8v-2zm3 4h7v2h-7v-2zm21-3c0 5.523-4.477 10-10 10-2.79 0-5.3-1.155-7.111-3h3.28c1.138.631 2.439 1 3.831 1 4.411 0 8-3.589 8-8s-3.589-8-8-8c-1.392 0-2.693.369-3.831 1h-3.28c1.811-1.845 4.321-3 7.111-3 5.523 0 10 4.477 10 10z"
                   />
                 </svg>
               </div>
               <div class="w-5/6">
-                <h4 class="font-semibold text-lg text-gray-700 dark:text-teal-300">
-                  Real Time Location
-                </h4>
+                <h4 class="font-semibold text-lg text-gray-700 dark:text-teal-300">Fast Load</h4>
                 <p class="text-gray-500 dark:text-gray-400">
-                  Asperiores nemo possimus nesciunt quam mollitia.
+                  has fast access speed and no long loading time
                 </p>
               </div>
             </div>
@@ -99,5 +90,3 @@
     </div>
   </div>
 </template>
-
-<style scoped></style>
