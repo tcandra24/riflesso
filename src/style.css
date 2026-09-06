@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #10131a;
+  --color-surface: #10131a;
+  --color-surface-dim: #10131a;
+  --color-surface-bright: #363941;
+  --color-surface-container-lowest: #0b0e15;
+  --color-surface-container-low: #191b23;
+  --color-surface-container: #1d1f27;
+  --color-surface-container-high: #272a32;
+  --color-surface-container-highest: #32353d;
+  
+  --color-on-surface: #e1e2ec;
+  --color-on-surface-variant: #b9cac4;
+  --color-outline: #83948f;
+  --color-outline-variant: #3a4a46;
+
+  --color-primary: #d7fff3;
+  --color-on-primary: #00382f;
+  --color-primary-container: #00f5d4;
+  --color-on-primary-container: #006c5c;
+  --color-primary-fixed: #26fedc;
+  --color-primary-fixed-dim: #00dfc1;
+
+  --color-secondary: #82d3ff;
+  --color-on-secondary: #003549;
+  --color-secondary-container: #00bbf9;
+  --color-on-secondary-container: #004761;
+
+  --color-tertiary: #e4ffd6;
+  --color-on-tertiary: #053900;
+  --color-tertiary-container: #34fc0d;
+  --color-on-tertiary-container: #106f00;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --spacing-gutter: 1rem;
+  --spacing-unit-2xs: 0.25rem;
+  --spacing-unit-xs: 0.5rem;
+  --spacing-unit-sm: 0.75rem;
+  --spacing-unit-md: 1rem;
+  --spacing-unit-lg: 1.5rem;
+  --spacing-unit-xl: 2rem;
+  --spacing-unit-2xl: 3rem;
+  --spacing-unit-3xl: 4rem;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .bg-cyber-grid {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(0, 245, 212, 0.03) 1px, transparent 1px), 
+      linear-gradient(to bottom, rgba(0, 245, 212, 0.03) 1px, transparent 1px);
+  }
+}
