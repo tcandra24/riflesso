@@ -1,0 +1,23 @@
+Perlu Diperbaiki
+
+- Data history hilang setiap refresh — Pinia store cuma in-memory, belum ada persistensi (localStorage/IndexedDB atau backend)
+- "Global Average" di Dashboard masih hardcoded (218ms), bukan data asli
+- "Session: 24 trials" dan "Consistency 98.4%" di Dashboard juga hardcoded, tidak dihitung dari history beneran
+- Badge "Top 1.0%" di kartu Personal Best hardcoded, tidak dihitung
+- False start penalty (+250ms) cuma ditampilkan di UI, tapi tidak benar-benar ditambahkan ke skor/history
+- Filter mode "Single Stimulus" ada di dropdown Analytics, tapi Arena cuma implementasi mode "Rapid Fire" — jadi filter itu tidak akan pernah nemu data
+- Tombol "TODAY / 30 DAYS / ALL TIME" di Analytics belum fungsional (masih visual saja)
+- Tombol "EXPORT CSV" belum fungsional
+- Tombol "Diagnostics" (Dashboard) dan "Apply Config" (Settings) belum fungsional
+- Gradient area chart di Analytics cuma didekati pakai opacity flat, belum canvas gradient asli seperti versi recharts
+
+Perlu Ditambahkan
+
+- Persistensi data (localStorage minimal, atau backend + auth beneran — tombol profil/User icon di header juga masih dekorasi)
+- Mode test lain (Single Stimulus, dsb.) supaya sesuai dengan yang sudah disebut di filter Analytics
+- Feedback suara/audio (Settings sudah menyebut "Audio Mode: 1000Hz Tone" tapi belum ada implementasi suara)
+- Pagination atau limit untuk tabel Session Ledger kalau history sudah banyak
+- Leaderboard/global comparison beneran (bukan angka mock) kalau mau fitur kompetitif
+- Export data (CSV/JSON) yang benar-benar jalan
+- Optimasi mobile/touch untuk Arena, karena game klik-target ini sangat sensitif terhadap ukuran layar dan latency sentuh
+- Unit test untuk logic game (state machine Arena) dan store Pinia
